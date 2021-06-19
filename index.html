@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Friday2verilog Converter</title>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="header" style="display:flex;align-items:center;">
+        <div id="title">Friday2verilog</div>
+        <div style="margin-top: auto; margin-bottom: 3px;">
+            <a id="subtitle" href="https://github.com/danielp96">by Daniel Pineda</a>
+        </div>
+        <div style="margin:5px;">
+            <button onclick="friday2verilog()">Convert</button>
+        </div>
+        <div style="margin-left: auto; margin-right:8px;display:flex;align-items:center;justify-content:flex-end;">
+            <a href="https://github.com/danielp96/friday2verilog_web"><img src="https://github.githubassets.com/images/modules/site/icons/footer/github-mark.svg"></a>
+        </div>
+    </div>
+    <div id="body">
+        <table style="width: 100%; height: 100%;">
+            <tr style="width: 100%; height: 100%;">
+                <td>
+                    <textarea id="input"
+                              name="input"
+                              placeholder="Insert Logic Friday expression here.&#10Example:&#10    Var0 = E3 E2' E1' + E3 E2' E0';&#10    Var1 = E3' E1' + E3' E2';"
+                              style="font-family:monospace;"></textarea>
+                </td>
+                <td>
+                    <textarea id="output"
+                              readonly="true" 
+                              placeholder="Verilog expression will appear here.&#10Example:&#10    Var[0] = (E[3] & ~E[2] & ~E[1]) | (E[3] & ~E[2] & ~E[0]);&#10    Var[1] = (~E[3] & ~E[1]) | (~E[3] & ~E[2]);" 
+                              style="font-family:monospace;"></textarea>
+                </td>
+            </tr>
+        </table>
+        <div id="notes">
+            Notes:
+            <ul>
+                <li>The expresion must have ";" at the end.</li>
+                <li>Numbers are used to indicate array indexing, don't use numbers as part of a variable name.</li>
+                <li>Don't use apostrophe (') as part of a varible name, only use it to indicate NOT operation.</li>
+                <li>Separate everything with spaces.</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
