@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Friday2verilog Converter</title>
     <meta charset="utf-8">
-    <script type="text/javascript" src="script.js"></script>
+    <script src="script.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -16,7 +16,7 @@
             <button onclick="friday2verilog()">Convert</button>
         </div>
         <div style="margin-left: auto; margin-right:8px;display:flex;align-items:center;justify-content:flex-end;">
-            <a href="https://github.com/danielp96/friday2verilog_web"><img src="https://github.githubassets.com/images/modules/site/icons/footer/github-mark.svg"></a>
+            <a href="https://github.com/danielp96/friday2verilog_web"><img src="https://github.githubassets.com/images/modules/site/icons/footer/github-mark.svg" alt="Github link"></a>
         </div>
     </div>
     <div id="body">
@@ -25,13 +25,13 @@
                 <td>
                     <textarea id="input"
                               name="input"
-                              placeholder="Insert Logic Friday expression here.&#10Example:&#10    Var0 = E3 E2' E1' + E3 E2' E0';&#10    Var1 = E3' E1' + E3' E2';"
+                              placeholder="Insert Logic Friday expression here.&#10;Example:&#10;    Var0 = E3 E2' E1' + E3 E2' E0';&#10;    Var1 = E3' E1' + E3' E2';"
                               style="font-family:monospace;"></textarea>
                 </td>
                 <td>
                     <textarea id="output"
-                              readonly="true" 
-                              placeholder="Verilog expression will appear here.&#10Example:&#10    Var[0] = (E[3] & ~E[2] & ~E[1]) | (E[3] & ~E[2] & ~E[0]);&#10    Var[1] = (~E[3] & ~E[1]) | (~E[3] & ~E[2]);" 
+                              readonly 
+                              placeholder="Verilog expression will appear here.&#10;Example:&#10;    Var[0] = (E[3] & ~E[2] & ~E[1]) | (E[3] & ~E[2] & ~E[0]);&#10;    Var[1] = (~E[3] & ~E[1]) | (~E[3] & ~E[2]);" 
                               style="font-family:monospace;"></textarea>
                 </td>
             </tr>
